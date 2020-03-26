@@ -1,3 +1,205 @@
-<h1>Hello 大家好</h1>
-<h2>我是夏木，这是我的个人网站</h2>
-<h2>很高兴你来到这里!</h2>
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>个人简历网页的实现</title>
+<!--<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />-->
+<style>
+/*图标*/
+h2#titleName {margin: 20px -60px 10px;}
+h2#ribbon:before {background-position: left -45px;}
+h2#tools:before {background-position: left top;}
+h2#learn:before {background-position: right top;}
+h2#clock:before {background-position: -45px top;}
+h2#titleName:before {background-position: -90px bottom;}
+/*个人简介*/
+#bio {position: relative;}
+#bio #avatar {float: left; margin: 0 20px 0 0;}
+#bio h2 {font-size: 15px;}
+#bio p {clear: left; margin:40px auto; padding:40px 45px; max-width: 560px; background: #fbfbfb; border: 1px solid #f3f3f3; border-radius: 8px; position: relative; border-width: 0 1px 1px; border-color: #fff #f3f3f3 #e8e8e8;line-height: 1.6em;}
+<!--获得荣誉-->
+#honorsAwards li {padding-left: 5px; margin-bottom: 8px;}
+
+ul#skills,
+ul#jobs,
+ul#schools,
+ul#recommends,
+ul#seenOn {margin: 0; list-style: none;}
+
+ul#skills,
+ul#jobs li,
+ul#schools li,
+ul#recommends li {margin: 0 0 20px 0; clear: both;}
+
+ul#skills .details,
+ul#skills .details,
+ul#jobs li .details,
+ul#schools li .details,
+ul#recommends li .details {float: left; width: 40%; margin-bottom:25px;}
+
+ul#jobs li p,
+ul#skills li > p,
+ul#schools li > p,
+ul#recommends li > p {float: right; width: 57%; margin-bottom: 25px;}
+
+.details h5 {font-style: italic;}
+* {
+	margin: 0;
+	padding: 0;
+	transition-property: background-color;
+	transition-duration: 0.20s;
+	transition-timing-function: linear;
+}
+body {
+	font-family: "Microsoft YaHei UI";
+	line-height: 1.2em;
+	background-color: #f3f3f3;
+	background-repeat: repeat;
+	background-attachment: fixed;
+	background-position: 0px 0px;
+	color: #444;
+	height: 100%;
+	width: auto;
+}
+#wrapper {
+	max-width: 700px;
+	margin: 40px auto 30px;
+	padding: 60px;
+	background: #fff;
+	box-shadow: 0 1px 3px rgba(0,0,0,.1);
+	position: relative;
+}
+ul {
+	margin: 0 0 0 15px;
+	position: relative;
+}
+li {
+	margin: 0 0 5px 0;
+	font-size: 13px;
+}
+p {
+	text-align: justify;
+	font-size: 13px;
+}
+.clear {
+	clear: both;
+}
+a {
+	color: #444;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+}
+h3 {
+	font-weight: bold;
+	font-size: 14px
+}
+h2.sectionHead {
+	clear: both;
+	font: bold 20px/12px "Microsoft YaHei UI";
+	margin: 60px -60px;
+	border-left: 52px solid #444;
+	color: #444;
+	padding: 1px 0 0 8px;
+	text-transform: uppercase;
+	position: relative;
+}
+h2.sectionHead:before {
+	content: "";
+	position: absolute;
+	width: 45px;
+	height: 45px;
+	left: -105px;
+	top: -15px;
+	background-image: url(../images/icons.png);
+}
+</style>
+</head>
+<body>
+
+<div id="wrapper">
+	<!--个人简介-->
+	<h2 id="titleName" class="sectionHead">宋斌伟</h2>
+	<div id="bio">
+		<h2>Web前端开发工程师、网页设计师</h2>
+		<p>我叫宋斌伟，男，今年20岁，现在河南中医药大学信息技术学院就读，主修信息管理与信息系统，精通HTML 5、CSS 3、jQuery、JavaScript,熟练使用各种Web开发和设计工具，了解基本的PHP。</p>
+	</div>
+	<div class="clear"></div>
+		<!--个人技能-->
+	<h2 id="tools" class="sectionHead">个人技能</h2>
+	<ul id="skills">
+		<li>
+			<div class="details">
+			<h3>HTML 5 + CSS 3</h3>
+			</div>
+			<p>精通并熟练使用</p>
+		</li>
+		<li>
+			<div class="details">
+			<h3>JavaScript</h3>
+			</div>
+			<p>精通并熟练使用</p>
+		</li>
+		<li>
+			<div class="details">
+			<h3>jQuery</h3>
+			</div>
+			<p>精通并熟练使用</p>
+		</li>
+	</ul>
+	<div class="clear"></div>
+	<!--工作经验-->
+	<h2 id="clock" class="sectionHead">工作经验</h2>
+	<ul id="jobs">
+		<li>
+			<div class="details">
+				<h3>河中医科技有限公司</h3>
+				<h4>Web前端开发工程师</h4>
+				<h5>2019.09 - 2020.03</h5>
+			</div>
+			<p>利用HTML/CSS/JavaScript/Flash等各种Web技术进行客户端产品的开发。完成客户端程序（也就是浏览器端）的开发，开发JavaScript以及Flash模块，同时结合后台开发技术模拟整体效果，进行丰富互联网的Web开发，致力于通过技术改善用户体验。</p>
+		</li>
+		<li>
+			<div class="details">
+				<h3>河中医信息公司</h3>
+				<h4>Web前端开发工程师、Web前端设计师</h4>
+				<h5>2019.09 - 2020.03</h5>
+			</div>
+			<p>开发JavaScript以及Flash模块，同时结合后台开发技术模拟整体效果，进行丰富互联网的Web开发，致力于通过技术改善用户体验。</p>
+		</li>
+	</ul>
+	<div class="clear"></div>
+	<!--教育背景-->
+	<h2 id="learn" class="sectionHead">教育背景</h2>
+	<ul id="schools">
+		<li>
+			<div class="details">
+				<h3>河南中医药大学</h3>
+				<h4>信息管理与信息系统专业</h4>
+				<h5>2019.09 - 2020.03</h5>
+			</div>
+			<p>主要学习高等数学、线性代数、概率论与数理统计、离散数学、组合数学、计算机原理、人工智能、程序设计基础、面向对象程序设计、数字逻辑电路、模拟电子技术、数据结构、算法设计、WEB程序设计、计算机组成与结构、操作系统、数据库系统原理、编译原理、计算机网络、网络工程、软件工程、数据库应用、信息安全、微型计算机技术、汇编语言、单片机技术、嵌入式系统、嵌入式操作系统、嵌入式设计与应用、移动设备应用软件开发等。</p>
+		</li>
+	</ul>
+	<div class="clear"></div>
+	<!--获得荣誉-->
+	<h2 id="ribbon" class="sectionHead">获得荣誉</h2>
+	<ul id="honorsAwards">
+		<li>CET-6英语六级，优秀的听说写能力</li>
+		<li>河南省教育教学信息化大奖赛一等奖</li>
+		<li>电子商务设计师</li>
+		<li>平面设计师</li>
+	</ul>
+</div>
+</body>
+</html>
